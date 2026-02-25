@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { Shield, Target, Users, Award, CheckCircle } from "lucide-react";
 import Layout from "@/components/Layout";
+import princeImg from "../../src/assets/princeImg.jpg";
+import peterImg from "../../src/assets/peterImg.jpg";
+import alozieImg from "../../src/assets/alozieImg.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -23,7 +26,7 @@ const About = () => {
       <section className="pt-28 pb-12 bg-gradient-navy">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "hsl(0 0% 98%)" }}>About PK5 Real Estate</h1>
-          <p style={{ color: "hsl(0 0% 98% / 0.7)" }}>Building trust through premium real estate experiences since 2010</p>
+          <p style={{ color: "hsl(0 0% 98% / 0.7)" }}>Building trust through premium real estate experiences since 2026</p>
         </div>
       </section>
 
@@ -35,7 +38,7 @@ const About = () => {
               <span className="text-accent text-sm font-semibold tracking-widest uppercase">Our Story</span>
               <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">A Legacy of Excellence</h2>
               <p className="text-muted-foreground mt-6 leading-relaxed">
-                Founded in 2010, PK5 Real Estate has grown from a boutique property consultancy into one of the most respected names in luxury real estate. We've helped hundreds of clients find their perfect properties and make smart investment decisions across residential, commercial, and development sectors.
+                Founded in 2026, PK5 Real Estate has grown from a focused property advisory firm into one of the most respected names in luxury real estate. We’ve helped hundreds of clients secure standout properties and make smart investment decisions across residential, commercial, and development sectors
               </p>
             </motion.div>
           </div>
@@ -52,7 +55,7 @@ const About = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-foreground mb-2 font-sans">Our Mission</h3>
-                <p className="text-muted-foreground leading-relaxed">To deliver unparalleled real estate services that exceed expectations, creating lasting value for our clients through integrity, expertise, and innovation.</p>
+                <p className="text-muted-foreground leading-relaxed">To set a higher standard in real estate by presenting exceptional, high-quality and unmatched service through by expertise, commitment, and integrity.</p>
               </div>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="flex gap-4">
@@ -71,32 +74,58 @@ const About = () => {
       {/* Team */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="text-center mb-14">
-            <span className="text-accent text-sm font-semibold tracking-widest uppercase">Our Team</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Meet the Experts</h2>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={0}
+            className="text-center mb-14">
+            <span className="text-accent text-sm font-semibold tracking-widest uppercase">
+              Our Team
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">
+              Meet the Experts
+            </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {[
+              { name: "Prince Nnaemeka Njoku", role: "CEO & Founder", image: princeImg },
+              { name: "Peter Eziakor", role: "Head of Facilities & Production", image: peterImg },
+              { name: "Alozie Okwukanma", role: "Head of IT", image: alozieImg },
+            ].map((person, index) => (
               <motion.div
-                key={member.name}
+                key={person.name}
+                custom={index}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                custom={i}
                 variants={fadeUp}
-                className="text-center bg-card p-8 rounded-lg border border-border hover-lift"
+                className="p-6 rounded-lg bg-card shadow-sm border border-border text-center"
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-navy flex items-center justify-center mx-auto mb-4">
-                  <span className="text-accent font-bold text-lg">{member.initials}</span>
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                  <img
+                    src={person.image}
+                    alt={person.name}
+                    className="w-full h-full object-cover object-[50%_15%]"
+                  />
+
                 </div>
-                <h3 className="font-semibold text-foreground font-sans">{member.name}</h3>
-                <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
+
+
+                <h3 className="text-lg font-semibold text-foreground">
+                  {person.name}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {person.role}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* Trust Badges */}
       <section className="py-16 bg-gradient-navy">

@@ -66,7 +66,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           <a href="tel:+1234567890" className={`flex items-center gap-1.5 text-sm font-medium ${showSolid ? "text-foreground" : "text-primary-foreground/90"}`}>
             <Phone className="w-4 h-4" />
-            <span>+1 (234) 567-890</span>
+            <span>+2348026133205</span>
           </a>
           <Button variant="gold" size="sm" asChild>
             <Link to="/contact">Get in Touch</Link>

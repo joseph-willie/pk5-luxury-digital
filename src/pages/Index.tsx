@@ -96,7 +96,7 @@ const Index = () => {
               <span className="text-gradient-gold">Smart Investments.</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 leading-relaxed" style={{ color: "hsl(0 0% 98% / 0.8)" }}>
-              PK5 Real Estate delivers exceptional property experiences — from luxury residences to high-yield commercial investments.
+             PK5 Real Estate specializes in premium property services, delivering luxury living spaces and high-yield investment opportunities.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button variant="hero" size="lg" asChild>
@@ -115,10 +115,10 @@ const Index = () => {
         <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: "500+", label: "Properties Sold" },
-              { value: "$2B+", label: "Transaction Value" },
-              { value: "98%", label: "Client Satisfaction" },
-              { value: "15+", label: "Years Experience" },
+              { value: "50+", label: "Properties Sold" },
+              { value: "500M+", label: "Transaction Value" },
+              { value: "53%", label: "Client Satisfaction" },
+              { value: "2+", label: "Years Experience" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}

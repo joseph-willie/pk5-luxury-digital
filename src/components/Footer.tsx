@@ -48,7 +48,7 @@ const Footer = () => {
             <div className="flex flex-col gap-3">
               <a href="tel:+1234567890" className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                 <Phone className="w-4 h-4 text-accent" />
-                +1 (234) 567-890
+                +2348026133205
               </a>
               <a href="mailto:info@pk5realestate.com" className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                 <Mail className="w-4 h-4 text-accent" />
@@ -56,7 +56,9 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-2 text-sm text-primary-foreground/70">
                 <MapPin className="w-4 h-4 text-accent mt-0.5" />
-                <span>123 Premium Boulevard,<br />Business District, NY 10001</span>
+                <span>  Head Office: 5901 Peachtree <br/> Dunwoody Road, Suite A310,<br/>  Atlanta,  GA 30328, USA </span>
+
+   
               </div>
             </div>
           </div>

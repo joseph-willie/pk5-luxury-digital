@@ -46,7 +46,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground text-sm">Phone</p>
-                    <p className="text-muted-foreground text-sm">+1 (234) 567-890</p>
+                    <p className="text-muted-foreground text-sm">+2348026133205</p>
                   </div>
                 </a>
                 <a href="mailto:info@pk5realestate.com" className="flex items-center gap-4 group">
@@ -63,8 +63,9 @@ const Contact = () => {
                     <MapPin className="w-5 h-5 text-accent" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground text-sm">Office</p>
-                    <p className="text-muted-foreground text-sm">123 Premium Boulevard, Business District, NY 10001</p>
+                    <p className="font-semibold text-foreground text-sm">Head Office</p>
+                    <p className="text-muted-foreground text-sm" >
+                      Apt. B Imanium Estate,<br />Nathaniel Akpan Street, Off Ekpri Nsukara, <br />Uyo,  Akwa Ibom State.</p>
                   </div>
                 </div>
               </div>
@@ -115,7 +116,7 @@ const Contact = () => {
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-md border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                      placeholder="+1 (234) 567-890"
+                      placeholder="+234..."
                     />
                   </div>
                   <div>
@@ -150,6 +151,20 @@ const Contact = () => {
                 </Button>
               </form>
             </motion.div>
+
+             {/* Map placeholder */}
+              <div className="rounded-xl overflow-hidden border border-border h-48 bg-muted flex items-center justify-center">
+                <iframe
+                  title="Office Location"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=Apt.%20B%20Imanium%20Estate,%20Nathaniel%20Akpan%20Street,%20Off%20Ekpri%20Nsukara,%20Uyo,%20Akwa%20Ibom%20State&output=embed"
+                />
+              </div>
           </div>
         </div>
       </section>
